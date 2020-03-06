@@ -14,7 +14,7 @@ This site is an example of using [Eleventy's JavaScript Data Files](https://www.
  
 ## Clone and deploy!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wshepworth/insight-tracker)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wshepworth/trackity)
 
 ## Content from an external data source 
 

@@ -5,36 +5,35 @@ const seed   = require('../../../utils/save-seed.js');
 // via a URL of this form. We just need to pass in the ID of the sheet
 // which we can find in the URL of the document.
 const sheetID = "1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs";
-const googleSheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetID}/od6/public/values?alt=json`;
+const metricsTabID = "3";
+const googleWorksheetUrl = `https://spreadsheets.google.com/feeds/list/${sheetID}/${metricsTabID}/public/values?alt=json`;
 
 module.exports = () => {
   return new Promise((resolve, reject) => {
 
-    console.log(`Requesting data from ${googleSheetUrl}`);
+    console.log(`Requesting data from ${googleWorksheetUrl}`);
 
-    axios.get(googleSheetUrl)
+    axios.get(googleWorksheetUrl)
       .then(response => {
 
         // massage the data from the Google Sheets API into
         // a shape that will more convenient for us in our SSG.
         var data = {
-          "Registration": [],
-          "Sign up": []
+          "Insights gathered": [],
+          "Users spoke to": [],
+          "Assumptions validated": []
         };
 
         response.data.feed.entry.forEach(item => {
-          data[item.gsx$journey.$t].push({
-            "Journey": item.gsx$journey.$t,
-            "Insight": item.gsx$insight.$t,
-            "Sprint": item.gsx$sprint.$t,
-            "Confidence": item.gsx$confidence.$t,
-            "Priority": item.gsx$priority.$t
+          data[item.gsx$metric.$t].push({
+            "Metric": item.gsx$metric.$t,
+            "Total": item.gsx$total.$t
           })
         });
 
         // stash the data locally for developing without
         // needing to hit the API each time.
-        seed(JSON.stringify(data), `${__dirname}/../dev/sheet.json`);
+        seed(JSON.stringify(data), `${__dirname}/../dev/sheet-metric.json`);
 
         // resolve the promise and return the data
         resolve(data);
@@ -47,6 +46,4 @@ module.exports = () => {
         reject(error);
       });
   })
-
-  
 }

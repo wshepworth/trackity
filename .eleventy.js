@@ -1,18 +1,18 @@
-
 module.exports = function(config) {
 
-  // A useful way to reference the context we are runing eleventy in
+  // A useful way to reference the context we are running eleventy in
   let env = process.env.ELEVENTY_ENV;
 
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
+  config.addLayoutAlias('test', 'layouts/test.njk');
+  config.addLayoutAlias('example', 'layouts/example.njk');
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
   // use a filter for simple css minification
   config.addFilter("cssmin", require("./src/utils/minify-css.js"))
-
 
   // make the seed target act like prod
   env = (env=="seed") ? "prod" : env;

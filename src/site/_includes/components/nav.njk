@@ -1,6 +1,8 @@
 <nav> 
   <ul>
+    <li class="nav-item"><a class="button {% if page_id === "example" %}light{% endif %}" href="https://app.netlify.com/start/deploy?repository=https://github.com/wshepworth/trackity">Get it</a></li>
+    <li class="nav-item {% if page_id === "example" %}active{% endif %}"><a href="/example">Example</a></li>
     <li class="nav-item {% if page_id === "about" %}active{% endif %}"><a href="/about">About</a></li>
-    <li class="nav-item {% if page_id === "home" %}active{% endif %}"><a href="/index">Home</a></li>
+    <li class="nav-item {% if page_id === "home" %}active{% endif %}"><a href="/">Home</a></li>
   </ul>
 </nav>

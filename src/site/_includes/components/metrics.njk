@@ -1,0 +1,35 @@
+<div>
+  <div class="break-large orange"></div>
+  <div class="title-metrics">
+    {%- if title %}<h1 class="white">{{ title }}</h1>{% endif %}
+  </div>
+  <p class="white">Last updated... </p>
+</div>
+
+
+<div class="content-metrics"> 
+  <div class="item-metric">
+    {%- for item in sheetMetric["Assumptions validated"] -%}
+      <h1 class="white">{{ item. Total }}</h1>
+      <p>{{ item. Metric }}</p>
+    {%- endfor -%} 
+  </div>
+  <div class="item-metric">
+    {%- for item in sheetMetric["Assumptions validated"] -%}
+      <h1 class="white">{{ item. Total }}</h1>
+      <p>{{ item. Metric }}</p>
+    {%- endfor -%} 
+  </div>
+  <div class="item-metric">
+    {%- for item in sheetMetric["Assumptions validated"] -%}
+      <h1 class="white">{{ item. Total }}</h1>
+      <p>{{ item. Metric }}</p>
+    {%- endfor -%} 
+  </div>
+  <div class="item-metric">
+    {%- for item in sheetMetric["Assumptions validated"] -%}
+      <h1 class="white">{{ item. Total }}</h1>
+      <p>{{ item. Metric }}</p>
+    {%- endfor -%} 
+  </div>
+</div>

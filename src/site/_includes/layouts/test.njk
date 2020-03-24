@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    {% set css %}
+      {% include "css/main.css" %}
+    {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+    <title>{{ title }}</title>
+  </head>
+
+  <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+    <div class="container-nav">
+      {% include "components/nav.njk" %}
+    </div>
+    <div class="container hero">
+      {% include "components/header.njk" %}
+       <a href="/example">See example</a>
+      <div>
+        <button>Get it</button>
+      </div>
+    </div>
+    <div class="section info">
+      {% include "components/info.njk" %}
+    </div>
+    <div class="container-about">
+      <div class="header-about">
+        <h2>Research and design are team sports</h2>
+      </div>
+    <div class="content about">
+      {{ about | safe }}
+    </div>
+    </div>
+    <div class="section features">
+      {% include "components/features.njk" %}
+    </div>
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </body>
+</html>
+
+
+

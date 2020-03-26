@@ -9,7 +9,7 @@ page_id: example
   <a class="tablinks" onclick="openTab(event, 'Research')" id="defaultOpen">Research insights</a>
   <a class="tablinks" onclick="openTab(event, 'Assumptions')">Assumptions</a>
   <a class="tablinks" onclick="openTab(event, 'User-needs')">User needs</a>
-  <a class="tablinks" onclick="openTab(event, 'Design-decisions')">Design decisions</a>
+  <a class="tablinks" onclick="openTab(event, 'Problem-statements')">Problem statements</a>
 </div>
 
 <!-- Tab content -->
@@ -83,8 +83,8 @@ page_id: example
       <th>Journey</th>
       <th>Sprint</th>
       <th>Confidence</th>
-      <th>Priority</th>
       <th>Insight</th>
+      <th>Last updated</th>
     </tr>
 	</thead>
   {%- for item in sheet.Registration -%}
@@ -93,8 +93,8 @@ page_id: example
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
       <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
   {%- for item in sheet["Sign up"] -%}
@@ -102,8 +102,8 @@ page_id: example
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
       <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>
@@ -121,30 +121,30 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
 <table>
 	<thead>
     <tr>
-      <th>Journey</th>
-      <th>Sprint</th>
-      <th>Confidence</th>
-      <th>Priority</th>
+      <th>Type</th>
+      <th>Assumption</th>
+      <th>Validated</th>
       <th>Insight</th>
+      <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheet.Registration -%}
+  {%- for item in sheetAssumptions.Formative -%}
 	<tbody>
     <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
+      <td>{{ item. Type }}</td>
+      <td>{{ item. Assumption }}</td>
+      <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
-  {%- for item in sheet["Sign up"] -%}
-      <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
+  {%- for item in sheetAssumptions.Summative -%}
+    <tr>
+      <td>{{ item. Type }}</td>
+      <td>{{ item. Assumption }}</td>
+      <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>
@@ -156,71 +156,57 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
 
   The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).
 
-  <table>
+<table>
+	<thead>
     <tr>
-      <th>Journey</th>
-      <th>Sprint</th>
-      <th>Confidence</th>
-      <th>Priority</th>
-      <th>Insight</th>
+      <th>As a</th>
+      <th>I need</th>
+      <th>So that</th>
+      <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheet.Registration -%}
+  {%- for item in sheetNeeds.User -%}
 	<tbody>
     <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
-      <td>{{ item. Insight }}</td>
+      <td>{{ item["As a"] }}</td>
+      <td>{{ item["I need"] }}</td>
+      <td>{{ item["So that"] }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
-  {%- for item in sheet["Sign up"] -%}
+  {%- for item in sheetNeeds.Stakeholder -%}
       <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
-      <td>{{ item. Insight }}</td>
+      <td>{{ item["As a"] }}</td>
+      <td>{{ item["I need"] }}</td>
+      <td>{{ item["So that"] }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>
 </table>
 
-
 </div>
 
-<div id="Design-decisions" class="tabcontent">
-  <h2>Design decisions</h2>
+<div id="Problem-statements" class="tabcontent">
+  <h2>Problem statements</h2>
 
   The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).
 
 <table>
     <tr>
-      <th>Journey</th>
-      <th>Sprint</th>
-      <th>Confidence</th>
-      <th>Priority</th>
-      <th>Insight</th>
+      <th>Problem statement</th>
+      <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheet.Registration -%}
+  {%- for item in sheetProblemStatements["Problem"] -%}
 	<tbody>
     <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
-      <td>{{ item. Insight }}</td>
+      <td>{{ item["Problem statement"] }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
-  {%- endfor -%}
-  {%- for item in sheet["Sign up"] -%}
-      <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
-      <td>{{ item. Priority }}</td>
-      <td>{{ item. Insight }}</td>
+    <tr>
+      <td>{{ item["Problem statement"] }}</td>
+      <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>

@@ -18,10 +18,13 @@
       {% include "components/nav.njk" %}
     </div>
     <div class="container hero">
-      {% include "components/header.njk" %}
-       <a href="/example">See example</a>
-      <div>
-        <button>Get it</button>
+      <div class="hero-left">
+        {% include "components/header.njk" %}
+        <a href="" class="button">Get it</a>
+        <a href="/example" class="button secondary">See example</a>
+      </div>
+      <div class="hero-right">
+        <img src="{{ "/images/trackity-illo-compressed.png" | url }}" width="500" />
       </div>
     </div>
     <div class="section info">
@@ -29,10 +32,11 @@
     </div>
     <div class="container-about">
       <div class="header-about">
-        <h2>Research and design are team sports</h2>
+        <h1>Documentation is a <span class="orange">team sport</span></h1>
       </div>
     <div class="content about">
-      {{ about | safe }}
+      <h3 class="white">{{ about_header | safe }}</h3>
+      <p class="large">{{ about | safe }}</h3>
     </div>
     </div>
     <div class="section features">

@@ -5,8 +5,12 @@ module.exports = function(config) {
 
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
-  config.addLayoutAlias('test', 'layouts/test.njk');
+  config.addLayoutAlias('home', 'layouts/home.njk');
   config.addLayoutAlias('example', 'layouts/example.njk');
+
+
+// Allow images to be passed round
+  config.addPassthroughCopy('./src/site/images');
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));

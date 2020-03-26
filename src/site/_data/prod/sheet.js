@@ -28,7 +28,7 @@ module.exports = () => {
             "Insight": item.gsx$insight.$t,
             "Sprint": item.gsx$sprint.$t,
             "Confidence": item.gsx$confidence.$t,
-            "Priority": item.gsx$priority.$t
+            "Last updated": item.gsx$lastupdated.$t
           })
         });
 
@@ -43,7 +43,7 @@ module.exports = () => {
 
       // uh-oh. Handle any errrors we might encounter
       .catch(error => {
-        console.log('Error :', error);
+        console.log('Error:', error);
         reject(error);
       });
   })

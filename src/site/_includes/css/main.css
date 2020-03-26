@@ -24,7 +24,7 @@ body {
 
 .container.hero {
   color: #898989;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -85,7 +85,7 @@ h2 {
   color: #1F2D4C;
 }
 h3 {
-  font-size: 1.75em;
+  font-size: 1.25em;
 }
 
 .white {
@@ -419,9 +419,9 @@ border: 2px solid #0b0c0c;
   align-items: center;
   padding-left: calc((100vw - 1040px) / 2);
   padding-right: calc((100vw - 1040px) / 2);
-  margin-top: 200px;
-  margin-bottom: 200px;
-  height: 45vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  height: 600px;
 }
 @media (max-width: 1200px) {
   .section.features {

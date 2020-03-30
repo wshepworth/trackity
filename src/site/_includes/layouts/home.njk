@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     {% set css %}
       {% include "css/main.css" %}
+      {% include "css/table.css" %}
+      {% include "css/filter.css" %}
+      {% include "css/tabs.css" %}  
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
@@ -24,7 +27,7 @@
         <a href="/example" class="button secondary">See example</a>
       </div>
       <div class="hero-right">
-        <img src="{{ "/images/trackity-illo-compressed.png" | url }}" width="500" />
+        <img src="{{ "/images/trackity-illo-compressed.png" | url }}" width="100%" height="100%" />
       </div>
     </div>
     <div class="section info">

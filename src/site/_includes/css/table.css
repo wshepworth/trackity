@@ -1,0 +1,38 @@
+/* table styling */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(245, 245, 245);
+  font-size: 1.15em;
+}
+
+tr {
+  border-bottom: 1px rgb(245, 245, 245) solid;
+}
+
+.container.table {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.section.table {
+  margin-top: -120px;
+  border-radius: 50px;
+  border-top: 10px #356AF3 solid;
+  background-color: white;
+}

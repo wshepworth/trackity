@@ -6,6 +6,9 @@
 <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     {% set css %}
       {% include "css/main.css" %}
+      {% include "css/table.css" %}
+      {% include "css/filter.css" %}
+      {% include "css/tabs.css" %}  
     {% endset %}
     <style>
       {{ css | cssmin | safe }}

@@ -1,0 +1,22 @@
+/* filter styling */
+
+.drop-down {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 2.5rem;
+  padding: 5px;
+  border: 2px solid #0b0c0c;
+  }
+  
+  .filter {
+    width: 20%;
+    display: inline-block;
+  }
+  
+  .container-filters {
+    display: inline;
+  }

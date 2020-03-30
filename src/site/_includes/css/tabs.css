@@ -1,0 +1,63 @@
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  width: 40vw;
+  height: 88px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3em;
+}
+@media (max-width: 1200px) {
+  .tab {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .tab {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tab {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+  color: #A9A9A9;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border-bottom: none;
+  text-align: center;
+  width: 25%;
+}
+@media (max-width: 600px) {
+  .tab a {
+    width: 100%;
+    flex-basis: 34%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+.tab a:active {
+  border-bottom: solid 2px #356AF3;
+  color: #0F0F0F;
+  border-width: 50%;
+}
+.tablinks.active {
+  border-bottom: solid 2px #356AF3;
+  border-width: 50%;
+  color: #0F0F0F;
+}

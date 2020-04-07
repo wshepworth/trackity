@@ -101,7 +101,7 @@ page_id: example
       <tr>
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
+      <td {% if item. Confidence == 'Low' %} class="low"{% endif %}>{{ item. Confidence }}</td>
       <td>{{ item. Insight }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
@@ -211,6 +211,8 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
   {%- endfor -%}
 	</tbody>
 </table>
+
+<iframe width="100%" height="600px" src="https://miro.com/app/embed/o9J_kundxUk=/?" frameborder="0" scrolling="yes" allowfullscreen></iframe>
 
 
 </div>

@@ -551,7 +551,6 @@ button, .button {
   }
 }
 
-
 .item-metric {
   width: 38%;
   padding: 2em;
@@ -592,4 +591,8 @@ button, .button {
 
 .metric p {
   margin-left: 8px;
+}
+
+.low {
+  background-color: green;
 }

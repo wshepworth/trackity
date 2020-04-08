@@ -3,7 +3,9 @@
   <div class="title-metrics">
     {%- if title %}<h1 class="white">{{ title }}</h1>{% endif %}
   </div>
-  <p class="white">Last updated... </p>
+  {%- for item in sheet. Registration -%}
+    <p class="white">{{ item. Updated }}</p>
+  {%- endfor -%}
 </div>
 
 

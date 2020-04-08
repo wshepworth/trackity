@@ -28,7 +28,8 @@ module.exports = () => {
             "Insight": item.gsx$insight.$t,
             "Sprint": item.gsx$sprint.$t,
             "Confidence": item.gsx$confidence.$t,
-            "Last updated": item.gsx$lastupdated.$t
+            "Last updated": item.gsx$lastupdated.$t,
+            "Updated": item.updated.$t
           })
         });
 

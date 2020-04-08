@@ -123,8 +123,9 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
     <tr>
       <th>Type</th>
       <th>Assumption</th>
-      <th>Validated</th>
       <th>Insight</th>
+      <th>Validated</th>
+      <th>Risk</th>
       <th>Last updated</th>
     </tr>
 	</thead>
@@ -133,8 +134,8 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
     <tr>
       <td>{{ item. Type }}</td>
       <td>{{ item. Assumption }}</td>
-      <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item. Validated }}</td>
       <td>{{ item. Risk }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
@@ -143,8 +144,8 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
     <tr>
       <td>{{ item. Type }}</td>
       <td>{{ item. Assumption }}</td>
-      <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item. Validated }}</td>
       <td>{{ item. Risk }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>

@@ -1,5 +1,5 @@
 const axios  = require('axios');
-const seed   = require('../../../utils/save-seed.js');
+// const seed   = require('../../../utils/save-seed.js');
 
 // Once a Google sheet is "published to the web" we can access its JSON
 // via a URL of this form. We just need to pass in the ID of the sheet
@@ -22,7 +22,9 @@ module.exports = () => {
           "Insights gathered": [],
           "Users spoke to": [],
           "Assumptions validated": [],
-          "Research sessions": []
+          "Research sessions": [],
+          "Problem statements": [],
+          "Sheet last updated": []
         };
 
         response.data.feed.entry.forEach(item => {

@@ -92,7 +92,7 @@ page_id: example
     <tr>
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
-      <td>{{ item. Confidence }}</td>
+      <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>">{{ item. Confidence }}</div></td>
       <td>{{ item. Insight }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
@@ -101,7 +101,7 @@ page_id: example
       <tr>
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
-      <td {% if item. Confidence == 'Low' %} class="low"{% endif %}>{{ item. Confidence }}</td>
+      <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>">{{ item. Confidence }}</div></td>
       <td>{{ item. Insight }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
@@ -135,6 +135,7 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
       <td>{{ item. Assumption }}</td>
       <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item. Risk }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
@@ -144,6 +145,7 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
       <td>{{ item. Assumption }}</td>
       <td>{{ item. Validated }}</td>
       <td>{{ item. Insight }}</td>
+      <td>{{ item. Risk }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}

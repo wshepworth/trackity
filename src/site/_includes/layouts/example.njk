@@ -9,7 +9,8 @@
       {% include "css/main.css" %}
       {% include "css/table.css" %}
       {% include "css/filter.css" %}
-      {% include "css/tabs.css" %}  
+      {% include "css/tabs.css" %}
+      {% include "css/footer.css" %} 
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
@@ -19,7 +20,7 @@
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
     <div class="section metrics">
         <div class="container-nav example">
-      {% include "components/nav.njk" %}
+        {% include "components/nav.njk" %}
     </div>
       <div class="container metrics">
         {% include "components/metrics.njk" %}
@@ -30,6 +31,7 @@
       {{ content | safe }}
      </div>
     </div>
+    <div class="footer"></div>
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

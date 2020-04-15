@@ -92,18 +92,18 @@ page_id: example
     <tr>
       <td>{{ item. Journey }}</td>
       <td>{{ item. Sprint }}</td>
-      <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>">{{ item. Confidence }}</div></td>
+      <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>"></div>{{ item. Confidence }}</td>
       <td>{{ item. Insight }}</td>
       <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
   {%- for item in sheet["Sign up"] -%}
       <tr>
-      <td>{{ item. Journey }}</td>
-      <td>{{ item. Sprint }}</td>
-      <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>">{{ item. Confidence }}</div></td>
-      <td>{{ item. Insight }}</td>
-      <td>{{ item["Last updated"] }}</td>
+        <td>{{ item. Journey }}</td>
+        <td>{{ item. Sprint }}</td>
+        <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>"></div>{{ item. Confidence }}</td>
+        <td>{{ item. Insight }}</td>
+        <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>
@@ -214,8 +214,5 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
   {%- endfor -%}
 	</tbody>
 </table>
-
-<iframe width="100%" height="600px" src="https://miro.com/app/embed/o9J_kundxUk=/?" frameborder="0" scrolling="yes" allowfullscreen></iframe>
-
 
 </div>

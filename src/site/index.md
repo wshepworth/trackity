@@ -1,6 +1,6 @@
 ---
 title: Track insights
-subtitle: Documentation doesn't have to be difficult. Track insights and have them displayed, all from a Google Sheet
+subtitle: Documentation doesn't have to be difficult. Track insights and have them displayed, all from a Google Sheet.
 layout: home
 page_id: home
 about_header: Tracking insights can be hard.<br><br> 

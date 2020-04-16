@@ -1,4 +1,26 @@
 .footer {
-  background-color: green;
-  height: 80px;
+  width: 100%;
+  background-color: #F4F4F6;
+  padding: 24px 0px;
+}
+
+.footer p {
+  font-size: 0.95em;
+  margin-bottom: 0px;
+}
+
+.footer span {
+  font-weight: 600 !important;
+}
+
+.footer a {
+  margin-bottom: 0px;
+  font-weight: 600 !important;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

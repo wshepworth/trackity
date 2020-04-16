@@ -10,7 +10,8 @@
       {% include "css/table.css" %}
       {% include "css/filter.css" %}
       {% include "css/tabs.css" %}  
-      {% include "css/footer.css" %} 
+      {% include "css/footer.css" %}
+      {% include "css/nav.css" %}
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
@@ -24,6 +25,11 @@
     <div class="container">
       {% include "components/header.njk" %}
       {{ content | safe }}
+    </div>
+    <div class="footer">
+      <div class="container">
+        {% include "components/footer.njk" %}
+      </div>    
     </div>
   </body>
 </html>

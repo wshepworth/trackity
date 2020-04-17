@@ -9,6 +9,31 @@
   height: 100%; 
 }
 
+#myTopnav > ul > a.icon:active {
+  border-bottom: none;
+}
+
+#myTopnav > ul > a.icon:hover {
+  border-bottom: none;
+}
+
+#myTopnav > ul > a.icon:focus {
+  border-bottom: none;
+}
+
+/* needs media query
+#myTopnav > ul > li:nth-child(1) {
+  width: 30%;
+  margin-left: 14px;
+  text-align: center;
+}
+
+/* need media query
+#myTopnav > ul > li.nav-item.active {
+  border-left: 8px solid orange;
+}
+
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a.icon {

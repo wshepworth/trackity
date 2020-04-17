@@ -30,9 +30,71 @@ tr {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 600px) {
+  .container.table {
+    width: 95%;
+    overflow-x: none;
+  }
+}
+
 .section.table {
   margin-top: -120px;
   border-radius: 50px;
   border-top: 10px #356AF3 solid;
   background-color: white;
+}
+
+@media
+only screen and (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-top: 8px;
+  }
+
+  td:last-of-type{
+    margin-bottom: 8px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    margin-left: 150px;
+  }
+  td:before {
+    position: absolute;
+    width: 20%;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+    font-weight: bold;
+  }
+
+  .research-insights td:nth-of-type(1):before { content: "Journey";}
+  .research-insights td:nth-of-type(2):before { content: "Sprint"; }
+  .research-insights td:nth-of-type(3):before { content: "Confidence"; }
+  .research-insights td:nth-of-type(4):before { content: "Insight"; }
+  .research-insights td:nth-of-type(5):before { content: "Last updated"; }
+
+  .assumptions td:nth-of-type(1):before { content: "Type";}
+  .assumptions td:nth-of-type(2):before { content: "Assumption"; }
+  .assumptions td:nth-of-type(3):before { content: "Insight"; }
+  .assumptions td:nth-of-type(4):before { content: "Risk"; }
+  .assumptions td:nth-of-type(5):before { content: "Last updated"; }
+
+
+  .user-needs td:nth-of-type(1):before { content: "As a";}
+  .user-needs td:nth-of-type(2):before { content: "I need"; }
+  .user-needs td:nth-of-type(3):before { content: "So that"; }
+  .user-needs td:nth-of-type(4):before { content: "Last updated"; }
+
+  .problem-statements td:nth-of-type(1):before { content: "Problem statement";}
+  .problem-statements td:nth-of-type(2):before { content: "Last updated"; }
 }

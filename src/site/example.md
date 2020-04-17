@@ -13,7 +13,7 @@ page_id: example
 </div>
 
 <!-- Tab content -->
-<div id="Research" class="tabcontent">
+<div id="Research" class="tabcontent research-insights">
   <h2>Research insights</h2>
 
   The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).
@@ -113,7 +113,7 @@ page_id: example
 
 </div>
 
-<div id="Assumptions" class="tabcontent">
+<div id="Assumptions" class="tabcontent assumptions">
   <h2>Assumptions</h2>
 
 The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).
@@ -154,7 +154,7 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
 </table>
 </div>
 
-<div id="User-needs" class="tabcontent">
+<div id="User-needs" class="tabcontent user-needs">
   <h2>User needs</h2>
 
   The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).
@@ -190,7 +190,7 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
 
 </div>
 
-<div id="Problem-statements" class="tabcontent">
+<div id="Problem-statements" class="tabcontent problem-statements">
   <h2>Problem statements</h2>
 
   The example below gets data from [this G-sheet](https://docs.google.com/spreadsheets/d/1tzRuNEUBmpauOlIWZnR3in_LMvWCmxhRjvcF_ZxGtxs/edit?usp=sharing).

@@ -42,15 +42,12 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 @media (max-width: 834px) {
   .hero-right img {
-      width: 500px;
-      position: absolute;
-      top: 35vh;
-      left: 50vw;
-      z-index: -1;
+    display: none;
   }
 }
 
@@ -62,6 +59,14 @@ body {
       left: 50vw;
       z-index: -1;
   }
+  .hero-left {
+    width: 100%
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  margin: 0px;
 }
 
 @media (max-width: 400px) {
@@ -122,7 +127,7 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-top: 0.4em;
   margin-bottom: 0.2em;
   line-height: 130%;
@@ -160,6 +165,7 @@ p.large {
 @media (max-width: 568px) {
   .subtitle {
     width: 100%;
+    margin-bottom: 16px;
   }
 }
 
@@ -170,7 +176,7 @@ p.large {
 }
 
 p {
-  font-size: 1.15em;
+  font-size: 1.10em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -214,7 +220,7 @@ a:focus {
 
 .logo {
   float: left;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .logo a {
@@ -547,9 +553,12 @@ a:hover.button  {
   }
 }
 
-@media (max-width: 1200px) and (min-width: 668px) {
+@media (max-width: 968px) and (min-width: 668px) {
   .container.metrics {
     flex-wrap: wrap;
+  }
+  .content-metrics {
+    margin-top: 2em;
   }
 }
 
@@ -560,6 +569,7 @@ a:hover.button  {
   width: 100%;
   justify-content: flex-end;
   align-items: flex-start;
+
 }
 
 @media (max-width: 1400px) {
@@ -572,17 +582,24 @@ a:hover.button  {
 @media (max-width: 668px) {
   .content-metrics {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .content-metrics {
+    display: block;
   }
 }
 
 .item-metric {
-  width: 38%;
   padding: 2em;
   border-radius: 10px;
   color: white;
   background-color: #293B65;
   margin: 0 0 24px 24px;
+  flex-basis: calc(50% - 80px);
 }
 @media (max-width: 1200px) {
   .item-metric {
@@ -592,8 +609,24 @@ a:hover.button  {
 }
 @media (max-width: 668px) {
   .item-metric {
-    margin: 0px 16px 16px 0px;
-    padding: 16px;
+    flex-basis: calc(50% - 32px);
+    padding: 12px;
+  }
+  .item-metric:nth-of-type(even)  {
+    margin: 8px 0px 8px 0px;
+  }
+  .item-metric:nth-of-type(odd)  {
+    margin: 8px 8px 8px 0px;
+  }
+}
+@media (max-width: 400px) {
+  .item-metric {
+    display: flex;
+    align-items: baseline;
+    margin: 8px 0px 0px 0px !important;
+  }
+  .item-metric h1 {
+    margin-right: 8px;
   }
 }
 

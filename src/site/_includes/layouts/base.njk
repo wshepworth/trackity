@@ -24,11 +24,21 @@
     </div>
     <div class="container">
       {% include "components/header.njk" %}
-      {{ content | safe }}
     </div>
-    <div class="footer">
-      <div class="container">
+    <div class="footer-wrapper">
+      <div class="container flex">
+        <div class="column-two-thirds">
+          {{ content | safe }}
+        </div>
+        <div class="column-one-third">
+          {{ clone | safe }}
+        </div>
+
+      </div>
+      <div class="footer">
+        <div class="container">
         {% include "components/footer.njk" %}
+        </div>
       </div>    
     </div>
   </body>

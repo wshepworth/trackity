@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 1.8;
-  min-height: 100vh;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
@@ -685,4 +685,41 @@ a:hover.button  {
 .confidence.unknown {
   background-color: grey;
   color: white;
+}
+
+
+
+/* styling for about page */
+
+.container.flex {
+  display: inline-flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column-two-thirds {
+  width: 60%;
+}
+
+.column-one-third {
+  width: 30%;
+}
+
+.deploy {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+@media screen and (max-width: 668px) {
+  .container.flex {
+    display: block !important;
+  }
+  .column-one-third {
+    width: 100%;
+  }
+  .column-two-thirds {
+    width: 100%;
+  }
 }

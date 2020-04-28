@@ -1,5 +1,5 @@
 {
-  "name": "eleventy-example-google-sheets-data",
+  "name": "trackity",
   "version": "0.0.1",
   "description": "An example of sourcing data from Google Sheets for use in Eleventy at build time",
   "author": "Will Hepworth",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wshepworth/trackify"
+    "url": "https://github.com/wshepworth/trackity"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",

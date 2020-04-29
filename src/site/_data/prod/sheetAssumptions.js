@@ -18,13 +18,15 @@ module.exports = () => {
 
         // massage the data from the Google Sheets API into
         // a shape that will more convenient for us in our SSG.
+        // UPDATE this array if you update table headers
         var data = {
-          "Formative": [],
-          "Summative": []
+          "assumptionHidden": []
         };
 
+        // UPDATE these data items to match any updated table headers
         response.data.feed.entry.forEach(item => {
-          data[item.gsx$type.$t].push({
+          data[item.gsx$assumptionhidden.$t].push({
+            "assumptionHidden": item.gsx$assumptionhidden.$t,
             "Type": item.gsx$type.$t,
             "Assumption": item.gsx$assumption.$t,
             "Validated": item.gsx$validated.$t,
@@ -50,5 +52,4 @@ module.exports = () => {
       });
   })
 
-  
 }

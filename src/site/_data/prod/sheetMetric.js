@@ -18,6 +18,7 @@ module.exports = () => {
 
         // massage the data from the Google Sheets API into
         // a shape that will more convenient for us in our SSG.
+        // UPDATE this array if you update table headers
         var data = {
           "Insights gathered": [],
           "Users spoke to": [],
@@ -27,6 +28,7 @@ module.exports = () => {
           "Sheet last updated": []
         };
 
+        // UPDATE these data items to match any updated table headers
         response.data.feed.entry.forEach(item => {
           data[item.gsx$metric.$t].push({
             "Metric": item.gsx$metric.$t,

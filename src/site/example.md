@@ -87,7 +87,7 @@ page_id: example
       <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheet.Registration -%}
+  {%- for item in sheetInsights.insightHidden -%}
 	<tbody>
     <tr>
       <td>{{ item. Journey }}</td>
@@ -95,15 +95,6 @@ page_id: example
       <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>"></div>{{ item. Confidence }}</td>
       <td>{{ item. Insight }}</td>
       <td>{{ item["Last updated"] }}</td>
-    </tr>
-  {%- endfor -%}
-  {%- for item in sheet["Sign up"] -%}
-      <tr>
-        <td>{{ item. Journey }}</td>
-        <td>{{ item. Sprint }}</td>
-        <td><div class="confidence {% if item. Confidence == 'Low' %} low {% elif item. Confidence == 'Medium' %} medium {% elif item. Confidence == 'High' %} high {% elif item. Confidence == 'Unknown' %} unknown {% endif %}>"></div>{{ item. Confidence }}</td>
-        <td>{{ item. Insight }}</td>
-        <td>{{ item["Last updated"] }}</td>
     </tr>
   {%- endfor -%}
 	</tbody>
@@ -129,18 +120,8 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
       <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheetAssumptions.Formative -%}
+  {%- for item in sheetAssumptions.assumptionHidden -%}
 	<tbody>
-    <tr>
-      <td>{{ item. Type }}</td>
-      <td>{{ item. Assumption }}</td>
-      <td>{{ item. Insight }}</td>
-      <td>{{ item. Validated }}</td>
-      <td>{{ item. Risk }}</td>
-      <td>{{ item["Last updated"] }}</td>
-    </tr>
-  {%- endfor -%}
-  {%- for item in sheetAssumptions.Summative -%}
     <tr>
       <td>{{ item. Type }}</td>
       <td>{{ item. Assumption }}</td>
@@ -168,17 +149,9 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
       <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheetNeeds.User -%}
+  {%- for item in sheetNeeds.needHidden -%}
 	<tbody>
     <tr>
-      <td>{{ item["As a"] }}</td>
-      <td>{{ item["I need"] }}</td>
-      <td>{{ item["So that"] }}</td>
-      <td>{{ item["Last updated"] }}</td>
-    </tr>
-  {%- endfor -%}
-  {%- for item in sheetNeeds.Stakeholder -%}
-      <tr>
       <td>{{ item["As a"] }}</td>
       <td>{{ item["I need"] }}</td>
       <td>{{ item["So that"] }}</td>
@@ -201,7 +174,7 @@ The example below gets data from [this G-sheet](https://docs.google.com/spreadsh
       <th>Last updated</th>
     </tr>
 	</thead>
-  {%- for item in sheetProblemStatements["Problem"] -%}
+  {%- for item in sheetProblemStatements.problemHidden -%}
 	<tbody>
     <tr>
       <td>{{ item["Problem statement"] }}</td>

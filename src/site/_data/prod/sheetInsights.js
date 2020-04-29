@@ -17,13 +17,15 @@ module.exports = () => {
 
         // massage the data from the Google Sheets API into
         // a shape that will more convenient for us in our SSG.
+        // UPDATE this array if you update the first column with any new data item
         var data = {
-          "Registration": [],
-          "Sign up": []
+          "insightHidden": []
         };
 
+        // UPDATE these data items to match any updated table headers
         response.data.feed.entry.forEach(item => {
-          data[item.gsx$journey.$t].push({
+          data[item.gsx$insighthidden.$t].push({
+            "insightHidden": item.gsx$insighthidden.$t,
             "Journey": item.gsx$journey.$t,
             "Insight": item.gsx$insight.$t,
             "Sprint": item.gsx$sprint.$t,
@@ -35,7 +37,7 @@ module.exports = () => {
 
         // stash the data locally for developing without
         // needing to hit the API each time.
-        seed(JSON.stringify(data), `${__dirname}/../dev/sheet.json`);
+        seed(JSON.stringify(data), `${__dirname}/../dev/sheetInsights.json`);
 
         // resolve the promise and return the data
         resolve(data);
